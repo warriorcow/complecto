@@ -1,0 +1,182 @@
+-
+	var tarifs = [
+		{
+			title: "Бомба",
+			stages: [
+				{
+					title: "Подготовка",
+					items: [
+						{name: 'Подготовка дизайн-идеи', value: '-'},
+						{name: 'Разработка контент-плана на 1 месяц', value: '-'},
+						{name: 'Анализ потенциальной ЦА в соцсетях', value: '-'},
+					]
+				},
+				{
+					title: "Публикации",
+					items: [
+						{name: 'Публикация тексто-графических постов', value: '+'}, 
+						{name: 'Публикация Stories', value: '='}, 
+						{name: 'Создание анимаций (motion-design)', value: '+'},
+						{name: 'Создание ТЗ на Reels и клипы', value: '+'},
+						{name: 'Работа с комментариями', value: '+'},
+						{name: 'Проведение розыгрышей', value: '+'},
+						{name: 'Проведение опросов и интерактивов', value: '+'}
+					]
+				},
+				{
+					title: "Реклама",
+					items: [
+						{name: 'Формирование базы таргетинга', value: '+'}, 
+						{name: 'Разработка медиаплана', value: '='}, 
+						{name: 'Создание промопостов', value: '+'},
+						{name: 'Реклама на тематических площадках', value: '+'}
+					]
+				},
+				{
+					title: "Аналитика",
+					items: [
+						{name: 'Мониторинг роста подписчиков', value: '+'}, 
+						{name: 'Анализ соответсия подписчиков ЦА', value: '='}, 
+						{name: 'Анализ эффективности публикаций', value: '+'},
+						{name: 'Анализ трафика из SMM', value: '+'},
+						{name: 'Анализ упоминаний бренда в соцсетях', value: '+'}
+					]
+				},
+			]
+		},
+		{
+			title: "Бомба",
+			sale: true,
+			icon: 'picture/upload/bomb.png',
+			stages: [
+				{
+					title: "Подготовка",
+					items: [
+						{name: 'Подготовка дизайн-идеи', value: '-'},
+						{name: 'Разработка контент-плана на 1 месяц', value: '-'},
+						{name: 'Анализ потенциальной ЦА в соцсетях', value: '-'},
+					]
+				},
+				{
+					title: "Публикации",
+					items: [
+						{name: 'Публикация тексто-графических постов', value: '+'}, 
+						{name: 'Публикация Stories', value: '='}, 
+						{name: 'Создание анимаций (motion-design)', value: '+'},
+						{name: 'Создание ТЗ на Reels и клипы', value: '+'},
+						{name: 'Работа с комментариями', value: '+'},
+						{name: 'Проведение розыгрышей', value: '+'},
+						{name: 'Проведение опросов и интерактивов', value: '+'}
+					]
+				},
+				{
+					title: "Реклама",
+					items: [
+						{name: 'Формирование базы таргетинга', value: '+'}, 
+						{name: 'Разработка медиаплана', value: '='}, 
+						{name: 'Создание промопостов', value: '+'},
+						{name: 'Реклама на тематических площадках', value: '+'}
+					]
+				},
+				{
+					title: "Аналитика",
+					items: [
+						{name: 'Мониторинг роста подписчиков', value: '+'}, 
+						{name: 'Анализ соответсия подписчиков ЦА', value: '='}, 
+						{name: 'Анализ эффективности публикаций', value: '+'},
+						{name: 'Анализ трафика из SMM', value: '+'},
+						{name: 'Анализ упоминаний бренда в соцсетях', value: '+'}
+					]
+				},
+			]
+		},
+		{
+			title: "Бомба",
+			stages: [
+				{
+					title: "Подготовка",
+					items: [
+						{name: 'Подготовка дизайн-идеи', value: '-'},
+						{name: 'Разработка контент-плана на 1 месяц', value: '-'},
+						{name: 'Анализ потенциальной ЦА в соцсетях', value: '-'},
+					]
+				},
+				{
+					title: "Публикации",
+					items: [
+						{name: 'Публикация тексто-графических постов', value: '+'}, 
+						{name: 'Публикация Stories', value: '='}, 
+						{name: 'Создание анимаций (motion-design)', value: '+'},
+						{name: 'Создание ТЗ на Reels и клипы', value: '+'},
+						{name: 'Работа с комментариями', value: '+'},
+						{name: 'Проведение розыгрышей', value: '+'},
+						{name: 'Проведение опросов и интерактивов', value: '+'}
+					]
+				},
+				{
+					title: "Реклама",
+					items: [
+						{name: 'Формирование базы таргетинга', value: '+'}, 
+						{name: 'Разработка медиаплана', value: '='}, 
+						{name: 'Создание промопостов', value: '+'},
+						{name: 'Реклама на тематических площадках', value: '+'}
+					]
+				},
+				{
+					title: "Аналитика",
+					items: [
+						{name: 'Мониторинг роста подписчиков', value: '+'}, 
+						{name: 'Анализ соответсия подписчиков ЦА', value: '='}, 
+						{name: 'Анализ эффективности публикаций', value: '+'},
+						{name: 'Анализ трафика из SMM', value: '+'},
+						{name: 'Анализ упоминаний бренда в соцсетях', value: '+'}
+					]
+				},
+			]
+		},
+	]
+
+
+mixin tarifCard(data)
+	.tarif-card(class=`${data.sale ? 'sale' : ''}`)
+		.tarif-card__header
+			if data.sale
+				.tarif-card__tooltip Выгодно!
+			.tarif-card__name
+				if data.icon
+					img.tarif-card__icon(src=`${data.icon}` alt="")
+				span= data.title
+		.tarif-card__inner
+			table.tarif-table
+				tbody 
+					each stage, stage_index in data.stages
+						each item, item_index in stage.items
+							tr.tarif-table__stage
+								if item_index === 0
+									td(rowspan=`${stage.items.length}`, class=`tarif-table__stage-title ${stage_index % 2 !== 1 ? 'active' : ''}`)
+										span= stage.title
+								td.tarif-table__stage-name
+									div= item.name
+								td.tarif-table__stage-value
+									div= item.value
+		.tarif-card__price
+			div.d-flex.justify-content-between.align-items-center
+				div Стоимость
+				.tarif-card__price-value 245 000 руб.
+			button.btn.btn-warning.data-scroll.d-block.w-100 Заказать
+
+
+.tarif-container.d-flex
+	table.tarif-table.stages
+		tbody
+			each stage, stage_index in tarifs[0].stages
+				each item, item_index in stage.items
+					tr.tarif-table__stage
+						if item_index === 0
+							td(rowspan=`${stage.items.length}`, class=`tarif-table__stage-title ${stage_index % 2 !== 1 ? 'active' : ''}`)
+								div= stage.title
+						td.tarif-table__stage-name
+							div= item.name
+	.owl-tarifs.owl-carousel.owl-theme
+		each tarif in tarifs
+			+tarifCard(tarif)

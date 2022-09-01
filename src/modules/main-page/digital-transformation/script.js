@@ -1,3 +1,19 @@
+$('.owl-tarifs').owlCarousel({
+	margin: 15,
+	items: 1,
+	stagePadding: 30,
+	dots: true,
+	responsive: {
+		992: {
+			items: 3,
+			dots: false,
+			stagePadding: 0,
+			mouseDrag: false,
+			touchDrag: false,
+		}
+	},
+});
+
 $('.owl-right').owlCarousel({
 	loop:true,
 	autoWidth:true,
