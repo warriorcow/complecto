@@ -15,6 +15,12 @@ $(".owl-tarifs").owlCarousel({
   dots: true,
   onResize: responseTarifOwl,
   onInitialize: responseTarifOwl,
+  responsive: {
+    992: {
+        touchDrag: false,
+        mouseDrag: false,
+    }
+  }
 });
 
 $(".tarif-card__next").click(function () {
