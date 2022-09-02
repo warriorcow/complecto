@@ -102,12 +102,12 @@ mixin tarifTableTitles(stages, index, isCard)
 							td.tarif-table__stage-value
 								span= i[index + 1]
 
-.tarif-container-fluid
+.tarif-container-fluid.mt-4
 	.tarif-container
 		.h2.tarif-container__title
 			span.yellow-border Стоимость
 				span.border-container.animation.visible.animated(data-animate="newline")
-		.d-flex
+		.d-flex.w-100
 			.stages
 				+tarifTableTitles(stagess)
 			.owl-tarifs.owl-carousel.owl-theme

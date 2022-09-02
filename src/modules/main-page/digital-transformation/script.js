@@ -1,17 +1,20 @@
+function responseTarifOwl() {
+  if ($(window).width() > 992) {
+    this.options.items = 3;
+    this.options.stagePadding = 0;
+  } else {
+    this.options.items = 1;
+    this.options.stagePadding = 30;
+  }
+}
+
 $(".owl-tarifs").owlCarousel({
   margin: 15,
   items: 1,
   stagePadding: 30,
   dots: true,
-  responsive: {
-    992: {
-      items: 3,
-      dots: false,
-      stagePadding: 0,
-      mouseDrag: false,
-      touchDrag: false,
-    },
-  },
+  onResize: responseTarifOwl,
+  onInitialize: responseTarifOwl,
 });
 
 $(".tarif-card__next").click(function () {
