@@ -1,182 +1,115 @@
 -
-	var tarifs = [
+	var tarif = [
 		{
-			title: "Бомба",
-			stages: [
-				{
-					title: "Подготовка",
-					items: [
-						{name: 'Подготовка дизайн-идеи', value: '-'},
-						{name: 'Разработка контент-плана на 1 месяц', value: '-'},
-						{name: 'Анализ потенциальной ЦА в соцсетях', value: '-'},
-					]
-				},
-				{
-					title: "Публикации",
-					items: [
-						{name: 'Публикация тексто-графических постов', value: '+'}, 
-						{name: 'Публикация Stories', value: '='}, 
-						{name: 'Создание анимаций (motion-design)', value: '+'},
-						{name: 'Создание ТЗ на Reels и клипы', value: '+'},
-						{name: 'Работа с комментариями', value: '+'},
-						{name: 'Проведение розыгрышей', value: '+'},
-						{name: 'Проведение опросов и интерактивов', value: '+'}
-					]
-				},
-				{
-					title: "Реклама",
-					items: [
-						{name: 'Формирование базы таргетинга', value: '+'}, 
-						{name: 'Разработка медиаплана', value: '='}, 
-						{name: 'Создание промопостов', value: '+'},
-						{name: 'Реклама на тематических площадках', value: '+'}
-					]
-				},
-				{
-					title: "Аналитика",
-					items: [
-						{name: 'Мониторинг роста подписчиков', value: '+'}, 
-						{name: 'Анализ соответсия подписчиков ЦА', value: '='}, 
-						{name: 'Анализ эффективности публикаций', value: '+'},
-						{name: 'Анализ трафика из SMM', value: '+'},
-						{name: 'Анализ упоминаний бренда в соцсетях', value: '+'}
-					]
-				},
-			]
+			name: 'Хлопушка',
+			icon: '',
+			sale: false,
+			price: '140 000',
+			currency: 'руб.'
 		},
 		{
-			title: "Бомба",
-			sale: true,
+			name: 'Бомба',
 			icon: 'picture/upload/bomb.png',
-			stages: [
-				{
-					title: "Подготовка",
-					items: [
-						{name: 'Подготовка дизайн-идеи', value: '-'},
-						{name: 'Разработка контент-плана на 1 месяц', value: '-'},
-						{name: 'Анализ потенциальной ЦА в соцсетях', value: '-'},
-					]
-				},
-				{
-					title: "Публикации",
-					items: [
-						{name: 'Публикация тексто-графических постов', value: '+'}, 
-						{name: 'Публикация Stories', value: '='}, 
-						{name: 'Создание анимаций (motion-design)', value: '+'},
-						{name: 'Создание ТЗ на Reels и клипы', value: '+'},
-						{name: 'Работа с комментариями', value: '+'},
-						{name: 'Проведение розыгрышей', value: '+'},
-						{name: 'Проведение опросов и интерактивов', value: '+'}
-					]
-				},
-				{
-					title: "Реклама",
-					items: [
-						{name: 'Формирование базы таргетинга', value: '+'}, 
-						{name: 'Разработка медиаплана', value: '='}, 
-						{name: 'Создание промопостов', value: '+'},
-						{name: 'Реклама на тематических площадках', value: '+'}
-					]
-				},
-				{
-					title: "Аналитика",
-					items: [
-						{name: 'Мониторинг роста подписчиков', value: '+'}, 
-						{name: 'Анализ соответсия подписчиков ЦА', value: '='}, 
-						{name: 'Анализ эффективности публикаций', value: '+'},
-						{name: 'Анализ трафика из SMM', value: '+'},
-						{name: 'Анализ упоминаний бренда в соцсетях', value: '+'}
-					]
-				},
-			]
+			sale: true,
+			price: '245 000',
+			currency: 'руб.'
 		},
 		{
-			title: "Бомба",
+			name: 'Ракета',
+			icon: '',
+			sale: false,
+			price: '340 000',
+			currency: 'руб.'
+		},
+	]
+
+	var stagess = [
+		{
+			category: 'Подготовка',
 			stages: [
-				{
-					title: "Подготовка",
-					items: [
-						{name: 'Подготовка дизайн-идеи', value: '-'},
-						{name: 'Разработка контент-плана на 1 месяц', value: '-'},
-						{name: 'Анализ потенциальной ЦА в соцсетях', value: '-'},
-					]
-				},
-				{
-					title: "Публикации",
-					items: [
-						{name: 'Публикация тексто-графических постов', value: '+'}, 
-						{name: 'Публикация Stories', value: '='}, 
-						{name: 'Создание анимаций (motion-design)', value: '+'},
-						{name: 'Создание ТЗ на Reels и клипы', value: '+'},
-						{name: 'Работа с комментариями', value: '+'},
-						{name: 'Проведение розыгрышей', value: '+'},
-						{name: 'Проведение опросов и интерактивов', value: '+'}
-					]
-				},
-				{
-					title: "Реклама",
-					items: [
-						{name: 'Формирование базы таргетинга', value: '+'}, 
-						{name: 'Разработка медиаплана', value: '='}, 
-						{name: 'Создание промопостов', value: '+'},
-						{name: 'Реклама на тематических площадках', value: '+'}
-					]
-				},
-				{
-					title: "Аналитика",
-					items: [
-						{name: 'Мониторинг роста подписчиков', value: '+'}, 
-						{name: 'Анализ соответсия подписчиков ЦА', value: '='}, 
-						{name: 'Анализ эффективности публикаций', value: '+'},
-						{name: 'Анализ трафика из SMM', value: '+'},
-						{name: 'Анализ упоминаний бренда в соцсетях', value: '+'}
-					]
-				},
-			]
+				['Подготовка дизайн-идеи', '-', '-', '-'],
+				['Разработка контент-плана на 2 месяц', '+', '+', '+'],
+				['Анализ потенциальной ЦА в соцсетях', '+', '+', '+']
+			],
+		},
+		{
+			category: 'Публикации',
+			stages: [
+				['Публикация тексто-графических постов', '8', '12', '20'],
+				['Публикация Stories', '10', '15', '30'],
+				['Создание анимаций (motion-design)', '1', '2', '5'],
+				['Создание ТЗ на Reels и клипы', '-', '2', '4'],
+				['Работа с комментариями', '-', '+', '+'],
+				['Проведение розыгрышей', '-', '+', '+'],
+				['Проведение опросов и интерактивов', '-', '+', '+'],
+			],
+		},
+		{
+			category: 'Реклама',
+			stages: [
+				['Формирование базы таргетинга', '-', '-', '+'],
+				['Разработка медиаплана', '+', '+', '+'],
+				['Создание промопостов', '3', '3', '3'],
+				['Реклама на тематических площадках', '-', '-', '+'],
+			],
+		},
+		{
+			category: 'Аналитика',
+			stages: [
+				['Мониторинг роста подписчиков', '+', '+', '+'],
+				['Анализ соответсия подписчиков ЦА', '-', '+', '+'],
+				['Анализ эффективности публикаций', '+', '+', '+'],
+				['Анализ трафика из SMM', '+', '+', '+'],
+				['Анализ упоминаний бренда в соцсетях', '-', '-', '+'],
+			],
 		},
 	]
 
 
-mixin tarifCard(data)
+mixin tarifCard(data, index)
 	.tarif-card(class=`${data.sale ? 'sale' : ''}`)
 		.tarif-card__header
 			if data.sale
 				.tarif-card__tooltip Выгодно!
+			img.tarif-card__arrow.tarif-card__prev.nav-btn.prev-slide(src="picture/upload/arrow-carousel.svg")
 			.tarif-card__name
 				if data.icon
 					img.tarif-card__icon(src=`${data.icon}` alt="")
-				span= data.title
+				span= data.name
+			img.tarif-card__arrow.tarif-card__next.nav-btn.next-slide(src="picture/upload/arrow-carousel.svg")
 		.tarif-card__inner
-			table.tarif-table
-				tbody 
-					each stage, stage_index in data.stages
-						each item, item_index in stage.items
-							tr.tarif-table__stage
-								if item_index === 0
-									td(rowspan=`${stage.items.length}`, class=`tarif-table__stage-title ${stage_index % 2 !== 1 ? 'active' : ''}`)
-										span= stage.title
-								td.tarif-table__stage-name
-									div= item.name
-								td.tarif-table__stage-value
-									div= item.value
+			+tarifTableTitles(stagess, index, true)
+
 		.tarif-card__price
-			div.d-flex.justify-content-between.align-items-center
+			.d-flex.justify-content-between.align-items-center.flex-wrap
 				div Стоимость
-				.tarif-card__price-value 245 000 руб.
-			button.btn.btn-warning.data-scroll.d-block.w-100 Заказать
+				.tarif-card__price-value= `${data.price} ${data.currency}`
+			.d-flex.justify-content-center
+				button.btn.btn-warning.data-scroll.d-block.w-100 Заказать
 
-
-.tarif-container.d-flex
-	table.tarif-table.stages
-		tbody
-			each stage, stage_index in tarifs[0].stages
-				each item, item_index in stage.items
+mixin tarifTableTitles(stages, index, isCard)
+	table.tarif-table
+		tbody 
+			each s, t_index in stages
+				each i, i_index in s.stages
 					tr.tarif-table__stage
-						if item_index === 0
-							td(rowspan=`${stage.items.length}`, class=`tarif-table__stage-title ${stage_index % 2 !== 1 ? 'active' : ''}`)
-								div= stage.title
+						if i_index === 0
+							td(rowspan=`${s.stages.length}`, class=`tarif-table__stage-title ${t_index % 2 !== 1 ? 'active' : ''}`)
+								span= s.category
 						td.tarif-table__stage-name
-							div= item.name
-	.owl-tarifs.owl-carousel.owl-theme
-		each tarif in tarifs
-			+tarifCard(tarif)
+							span= i[0]
+						if isCard
+							td.tarif-table__stage-value
+								span= i[index + 1]
+
+.tarif-container-fluid
+	.tarif-container
+		.h2.tarif-container__title
+			span.yellow-border Стоимость
+				span.border-container.animation.visible.animated(data-animate="newline")
+		.d-flex
+			.stages
+				+tarifTableTitles(stagess)
+			.owl-tarifs.owl-carousel.owl-theme
+				each t, t_index in tarif
+					+tarifCard(t, t_index)

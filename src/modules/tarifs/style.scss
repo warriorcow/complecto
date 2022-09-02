@@ -1,7 +1,23 @@
 .tarif-card {
   background: #ffffff;
   border: 1px solid #fecc2f;
-  padding: 24px 10px 24px;
+  padding: 24px 12px 24px;
+
+  &__arrow {
+    width: 21px !important;
+    height: 15px;
+    @media (min-width: 992px) {
+      display: none !important;
+    }
+  }
+
+  &__next {
+    margin-left: 15px;
+    transform: rotate(180deg);
+  }
+  &__prev {
+    margin-right: 15px;
+  }
 
   &.sale {
     border: none;
@@ -15,7 +31,10 @@
 
   &__header {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 10px 0;
   }
 
   &__tooltip {
@@ -36,15 +55,14 @@
     width: 50px !important;
     height: 50px;
     display: inline !important;
-    margin-right: 10px;
+    margin-right: 15px;
+    object-fit: contain;
   }
 
   &__name {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
     font-weight: 700;
     font-size: 24px;
     line-height: 26px;
@@ -64,7 +82,7 @@
     }
     .btn {
       max-width: 220px;
-      margin: 30px auto 0;
+      margin: 30px 10px 0 0;
     }
   }
 }
@@ -88,7 +106,11 @@
   }
 
   &__stage-name {
+    width: 100%;
     @media (min-width: 992px) {
+      font-size: 12px;
+    }
+    @media (min-width: 1280px) {
       font-size: 14px;
     }
   }
@@ -111,10 +133,11 @@
     font-size: 12px;
     @media (min-width: 992px) {
       font-size: 14px;
-      border-right: 1px solid #FECC2F;
+      padding: 8px !important;
+      border-right: 1px solid #fecc2f;
     }
 
-    div {
+    span {
       display: block;
       transform: rotate(180deg);
     }
@@ -127,11 +150,11 @@
 
 .owl-tarifs {
   @media (min-width: 992px) {
-    min-width: 620px;
+    max-width: 650px;
   }
 
   @media (min-width: 1280px) {
-    min-width: 780px;
+    max-width: 780px;
   }
 
   .owl-stage-outer {
@@ -141,6 +164,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 0 !important;
     .owl-dot {
       span {
         width: 6px;
@@ -173,12 +197,14 @@
 .stages {
   display: none;
   margin-top: 115px;
+  margin-right: 17px;
   @media (min-width: 992px) {
     display: block;
   }
 }
 
 .tarif-container {
+  margin-bottom: 25px;
   @media (min-width: 992px) {
     max-width: 960px;
     width: 100%;
@@ -191,4 +217,12 @@
   @media (min-width: 1280px) {
     max-width: 1140px;
   }
+
+  &__title {
+    margin-left: 30px;
+  }
+}
+
+.tarif-container-fluid {
+  width: 100%;
 }
