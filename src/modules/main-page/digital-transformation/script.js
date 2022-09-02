@@ -1,4 +1,5 @@
 function responseTarifOwl() {
+  console.log(this);
   if ($(window).width() > 992) {
     this.options.items = 3;
     this.options.stagePadding = 0;
@@ -13,14 +14,10 @@ $(".owl-tarifs").owlCarousel({
   items: 1,
   stagePadding: 30,
   dots: true,
+  touchDrag: true,
+  mouseDrag: false,
   onResize: responseTarifOwl,
   onInitialize: responseTarifOwl,
-  responsive: {
-    992: {
-        touchDrag: false,
-        mouseDrag: false,
-    }
-  }
 });
 
 $(".tarif-card__next").click(function () {
