@@ -65,8 +65,54 @@
 		},
 	]
 
+	var tarif2 = [
+		{
+			name: 'Контент',
+			icon: '',
+			sale: false,
+			price: '60 000',
+			currency: 'руб.'
+		},
+		{
+			name: 'Продвижение',
+			icon: '',
+			sale: false,
+			price: '55 000',
+			currency: 'руб.'
+		},
+		{
+			name: 'Комплекс',
+			icon: '',
+			sale: true,
+			price: '90 000',
+			currency: 'руб.'
+		},
+	]
 
-mixin tarifCard(data, index)
+	var stagess2 = [
+		{
+			category: 'Контент',
+			stages: [
+				['Разработка контент-плана на 1 месяц', '+', '-', '+'],
+				['Написание статей (4 статьи в месяц)', '+', '-', '+'],
+				['Публикация статей на канале', '+', '-', '+']
+			],
+		},
+		{
+			category: 'Продвижение',
+			stages: [
+				['Анализ ЦА и конкурентов (из брифинга)', '-', '+', '+'],
+				['Настройка рекламного кабинета', '-', '+', '+'],
+				['Подбор заголовков и креативов', '-', '+', '+'],
+				['Запуск продвижения', '-', '+', '+'],
+				['Контроль и распределение ставок', '-', '+', '+'],
+				['Ежемесячная отчетность', '+', '+', '+']
+			],
+		}
+	]
+
+
+mixin tarifCard(data, index, stages)
 	.tarif-card(class=`${data.sale ? 'sale' : ''}`)
 		.tarif-card__header
 			if data.sale
@@ -78,7 +124,7 @@ mixin tarifCard(data, index)
 				span= data.name
 			img.tarif-card__arrow.tarif-card__next.nav-btn.next-slide(src="picture/upload/arrow-carousel.svg")
 		.tarif-card__inner
-			+tarifTableTitles(stagess, index, true)
+			+tarifTableTitles(stages, index, true)
 
 		.tarif-card__price
 			.d-flex.justify-content-between.align-items-center.flex-wrap
@@ -112,4 +158,16 @@ mixin tarifTableTitles(stages, index, isCard)
 				+tarifTableTitles(stagess)
 			.owl-tarifs.owl-carousel.owl-theme
 				each t, t_index in tarif
-					+tarifCard(t, t_index)
+					+tarifCard(t, t_index, stagess)
+
+.tarif-container-fluid.mt-4
+	.tarif-container
+		.h2.tarif-container__title
+			span.yellow-border Стоимость
+				span.border-container.animation.visible.animated(data-animate="newline")
+		.d-flex.w-100
+			.stages
+				+tarifTableTitles(stagess2)
+			.owl-tarifs.owl-carousel.owl-theme
+				each t, t_index in tarif2
+					+tarifCard(t, t_index, stagess2)
